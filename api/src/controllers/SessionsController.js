@@ -26,7 +26,8 @@ class SessionsController {
       subject: String(user.id),
       expiresIn
     });
-
+    
+    delete user.password
     response.status(201).json({ token, user });
   }
 }
